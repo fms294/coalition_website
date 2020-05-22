@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e35c7ae1-162f-4eed-9ce6-49a3fe575f3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/templates/Hello_word.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guinea_coalition/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/guinea_coalition/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/forms.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
