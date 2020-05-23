@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e35c7ae1-162f-4eed-9ce6-49a3fe575f3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/templates/aboutus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/guinea_coalition/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/guinea_coalition/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/Hello_word.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -32,6 +40,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/guinea_coalition/templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\fanta\PycharmProjects\coalition_webapp\guinea_coalition\templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

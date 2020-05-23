@@ -6,16 +6,23 @@ from . forms import FeedbackForm
 
 
 def index(request):
-    return HttpResponse("Hello World")
+    return render  (request, 'index.html')
 
 
-def feedback(request):
-    if request.method == "POST":
-        form = FeedbackForm
-        if form.is_valid():
-            form.save()
-            messages.add_message(request, messages.INFO, "Feedback Submitted.")
-            return redirect("feedback")
-        else:
-            form = FeedbackForm()
-        return render(request, "pages/feedback.html", {'form':form})
+def about(request):
+    return render  (request, 'aboutus.html')
+
+
+def contact(request):
+    return render (request, 'contact.html')
+
+# def feedback(request):
+#     if request.method == "POST":
+#         form = FeedbackForm
+#         if form.is_valid():
+#             form.save()
+#             messages.add_message(request, messages.INFO, "Feedback Submitted.")
+#             return redirect("feedback")
+#         else:
+#             form = FeedbackForm()
+#         return render(request, "pages/contact.html", {'form':form})

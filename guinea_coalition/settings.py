@@ -26,7 +26,9 @@ SECRET_KEY = 'i*v&!)h%9(cahc$k**k2rri0iiinlil6ea@h5@8a%(9%)!uuz&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR, 'static')
+]
 
 # Application definition
 
