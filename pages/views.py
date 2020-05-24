@@ -1,20 +1,26 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
-from . forms import FeedbackForm
+from .forms import FeedbackForm
+
+
 # Create your views here.
 
 
 def index(request):
-    return render  (request, 'index.html')
+    return render(request, 'index.html')
 
 
 def about(request):
-    return render  (request, 'aboutus.html')
+    return render(request, 'aboutus.html')
 
 
 def contact(request):
-    return render (request, 'contact.html')
+    form_class = FeedbackForm
+
+    return render(request, 'contact.html', {
+        'form': form_class
+    })
 
 # def feedback(request):
 #     if request.method == "POST":
