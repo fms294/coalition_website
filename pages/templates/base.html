@@ -24,15 +24,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" alt="logo image">
+                    <img src="{% static "img/logo.jpg" %}" class="img-fluid" alt="logo image" height="100" width="100">
+<!--                <img src="img/logo.png" class="img-fluid" alt="logo image">-->
                 </div>
                 <div class="col ">
                     <h1>G.D.C</h1>
                     <h2>Guinea Diaspora Coalition</h2>
                 </div>
+                <div class="col-12 col-md-3 col-xl-6 align-self-right">
+                    <a class="btn btn-lg  btn-info mt-4" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3fcmd%3d_account">Please Donate Here</a>
+                </div>
            </div>
         </div>
         </header>
+
         {% block content %}
 
         {% endblock %}
@@ -44,7 +49,6 @@
                         <ul class="list-unstyled">
                             <li><a href="{% url 'index' %}">Home</a></li>
                             <li><a href="{% url 'about' %}">About</a></li>
-                            <li><a href="#">Sites</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                         </ul>
                     </div>
@@ -53,7 +57,7 @@
                         <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"> <i class="fa fa-instagram"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="https://www.youtube.com/watch?v=m18EorQgA_8"><i class="fa fa-youtube"></i></a>
                 </div>
                 <div class="col-sm-4 text-center">
                     <a role="button" class="btn btn-link" href="tel:+555555555"><i class="fa fa-phone"></i> 1-555-555-5555</a><br>

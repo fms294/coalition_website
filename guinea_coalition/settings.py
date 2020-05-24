@@ -26,9 +26,7 @@ SECRET_KEY = 'i*v&!)h%9(cahc$k**k2rri0iiinlil6ea@h5@8a%(9%)!uuz&'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, 'static')
-]
+
 
 # Application definition
 
@@ -53,11 +51,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'guinea_coalition.urls'
-
+TEMP = os.path.join(BASE_DIR,'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMP],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STA = os.path.join(BASE_DIR,'static')
+
+
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR, 'static')
+]
