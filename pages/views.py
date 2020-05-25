@@ -16,11 +16,20 @@ def about(request):
 
 
 def contact(request):
-    form_class = FeedbackForm
-
-    return render(request, 'contact.html', {
-        'form': form_class
-    })
+    if request.method == "POST":
+        form_class = FeedbackForm(request.POST)
+        if form_class.is_valid():
+            form_class.save()
+            messages.add_message(request, messages.INFO, "Feedback Submitted.")
+            return redirect('contact')
+    else:
+        form_class = FeedbackForm()
+    return render(request, 'contact.html', {'form': form_class})
+    # form_class = FeedbackForm
+    #
+    # return render(request, 'contact.html', {
+    #     'form': form_class
+    # })
 
 # def feedback(request):
 #     if request.method == "POST":

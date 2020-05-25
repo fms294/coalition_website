@@ -4,7 +4,7 @@ from django.contrib import admin
 from .models import Feedback, Membership
 
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('firstname', 'lastname', 'email')
+    list_display = ('firstname', 'lastname', 'email', 'feedback', 'date')
     list_filter = ('date',)
     search_fields = ('firstname','lastname','email')
 
