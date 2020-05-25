@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load crispy_forms_tags %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -122,11 +122,20 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <h1>Contact</h1>
+        <h1>Send us your Feedback</h1>
         <form action="" method ="post">
             {% csrf_token %}
-            {{ form.as_table}}
-            <button type="submit">Submit</button>
+            <div class="row">
+                <div class="col-6">
+                    {{ form.firstname | as_crispy_field }}
+                </div>
+                <div class="col-6">
+                    {{ form.lastname | as_crispy_field }}
+                </div>
+            </div>
+            {{ form.email | as_crispy_field }}
+            {{ form.feedback |as_crispy_field }}
+            <button type="submit" class="btn btn-success">Submit</button>
 
         </form>
     </div>

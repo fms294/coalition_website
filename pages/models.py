@@ -7,7 +7,7 @@ from django.db import models
 class Feedback(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100)
+    email = models.EmailField(max_length=100, unique=True)
     feedback = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 
@@ -23,7 +23,7 @@ class Membership(models.Model):
     lastname = models.CharField(max_length=100)
     areacode = models.IntegerField()
     phone_number = models.IntegerField()
-    email = models.EmailField(max_length=100)
+    email = models.EmailField(max_length=100, unique=True)
     profession = models.CharField(max_length=400)
     country = models.CharField(max_length=50)
     date = models.DateTimeField(auto_now_add=True)
