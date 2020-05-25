@@ -74,9 +74,17 @@ WSGI_APPLICATION = 'guinea_coalition.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'guinea_coalition',
+        'USER': 'postgres',
+        'PASSWORD': 'Kankan2014@',
+        'HOST': '127.0.0.1',
+        'PORT': '8080'
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 }
 
 # Password validation
