@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e35c7ae1-162f-4eed-9ce6-49a3fe575f3e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guinea_coalition/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/guinea_coalition/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/contact.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +40,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/templates" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fanta\PycharmProjects\coalition_webapp" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\fanta\PycharmProjects\coalition_webapp\pages\templates" />
       <recent name="C:\Users\fanta\PycharmProjects\coalition_webapp\guinea_coalition\templates" />
@@ -71,7 +78,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
