@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -24,7 +24,7 @@ SECRET_KEY = 'i*v&!)h%9(cahc$k**k2rri0iiinlil6ea@h5@8a%(9%)!uuz&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1', 'localhost', 'boiling-bastion-45705.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','boiling-bastion-45705.herokuapp.com']
 
 # Application definition
 
@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'guinea_coalition',
         'USER': 'postgres',
         'PASSWORD': 'Kankan2014@',
-        'HOST': '127.0.0.1',
+        'HOST': 'boiling-bastion-45705.herokuapp.com',
         'PORT': '8080'
     }
     # 'default': {
@@ -129,7 +129,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# db_from_env = dj_database_url.config()
-# DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
