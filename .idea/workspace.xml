@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e35c7ae1-162f-4eed-9ce6-49a3fe575f3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guinea_coalition/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/guinea_coalition/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
