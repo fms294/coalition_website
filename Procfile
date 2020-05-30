@@ -1,1 +1,1 @@
-web: gunicorn guinea_coalition.wsgi --log-file
+web: gunicorn guinea_coalition.wsgi

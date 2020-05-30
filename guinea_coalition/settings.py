@@ -24,7 +24,7 @@ SECRET_KEY = 'i*v&!)h%9(cahc$k**k2rri0iiinlil6ea@h5@8a%(9%)!uuz&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1', 'localhost','boiling-bastion-45705.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1', 'localhost', 'boiling-bastion-45705.herokuapp.com']
 
 # Application definition
 
@@ -125,6 +125,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
