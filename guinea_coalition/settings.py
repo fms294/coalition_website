@@ -79,7 +79,8 @@ DATABASES = {
         'NAME': 'guinea_coalition',
         'USER': 'postgres',
         'PASSWORD': 'Kankan2014@',
-        'HOST': 'boiling-bastion-45705.herokuapp.com',
+        'HOST': '127.0.0.1',
+        # 'HOST': 'boiling-bastion-45705.herokuapp.com',
         'PORT': '8080'
     }
     # 'default': {

@@ -7,17 +7,28 @@
 <body>
     {% block content%}
     <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
-            <div class="container">
-<!--                <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30"></a>-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item "><a class="nav-link" href="{% url 'index' %}"> <i class="fa fa-home fa-lg"></i> Home  </a></li>
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info fa-lg"></i>  About  </a></li>
-<!--                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>  Sites  </a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  Contact  </a></li>
+                    <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home fa-lg"></i> Qui sommes-nous </a></li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="{% url 'about' %}" role="button" data-toggle="dropdown" > <i class="fa fa-info fa-lg"></i> Nos actions & campagnes</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#corona">Corona</a>
+                            <a class="dropdown-item" href="#diapora">Diapora Engagement</a>
+                            <a class="dropdown-item" href="#education">Education</a>
+                            <a class="dropdown-item" href="#sante">Sante</a>
+                            <a class="dropdown-item" href="#finance">Finances publique</a>
+                            <a class="dropdown-item" href="#agriculture">Agriculture et securite alimentaire</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  contact </a></li>
                 </ul>
             </div>
         </div>
@@ -27,17 +38,14 @@
          <div class="row">
             <div class="col">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="breadcrumb-item active">About</li>
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Qui sommes-nous</a></li>
+                    <li class="breadcrumb-item active">Nos actions & campagnes</li>
                 </ol>
-                <h2>About Us</h2>
-                 <hr />
             </div>
-
-        </div>
-        <div class="row row-content">
+         </div>
+         <div class="row row-content">
                 <div class="col col-sm-6">
-                    <h3>Our Mission</h3>
+                    <a name="corona"><h2>Corona</h2></a>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
                 <div class="col-sm-6">
@@ -45,13 +53,10 @@
                     <div class="card">
                         <div class="card-body">
                             <dl class="row">
-                                <dt class="col-6">Founded :</dt>
-                                <dd class="col-6">May, 2020</dd>
-                                <dt class="col-6">Total Member :</dt>
-                                <dd class="col-6">500</dd>
-                                <dt class="col-6">Board Member :</dt>
-                                <dd class="col-6">20</dd>
-
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
                             </dl>
                        </div>
                     </div>
@@ -59,67 +64,163 @@
                 <div class="col">
                     <div class="card bg-light mt-3">
                         <blockquote class="blockquote card-body">
-                            <p class="mb-0">It’s not how much we give but how much love we put into giving.</p>
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
                             <footer class="blockquote-footer"> Mother Theresa,
                             </footer>
                         </blockquote>
                     </div>
-
                 </div>
-        </div>
-
-        <div class="container">
-            <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2 class="text-sm-right">Our Community Partners</h2>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+                <div class="col col-sm-6">
+                    <a name="diaspora"><h2>Diapora Engagement</h2></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
-                <div class="col">
-                    <div class="media">
-                        <div class="media-body align-self-center">
-                            <h3>Partern1</h3>
-                            <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-
-                            <h3>Partern2</h3>
-                            <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                        </div>
+                <div class="col-sm-6">
+                    <h3 class="card-header bg-primary text-white">Facts</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
+                            </dl>
+                       </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row row-content">
-            <div class="col-sm-9">
-                <h2>Facts &amp; Donation By Continent</h2>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr class="bg-primary text-light">
-                                <th></th>
-                                <th>2020</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-primary">
-                            <tr>
-                                <th>America</th>
-                                <td>$ 2, 000</td>
-                            </tr>
-                            <tr>
-                                <th>Africa</th>
-                                <td>$ 1, 000</td>
-                            </tr>
-                            <tr>
-                                <th>Europe</th>
-                                <td>$1, 500</td>
-                            </tr>
-                             <tr>
-                                <th>TOTAL</th>
-                                <td>$3, 500</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="col">
+                    <div class="card bg-light mt-3">
+                        <blockquote class="blockquote card-body">
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
+                            <footer class="blockquote-footer"> Mother Theresa,
+                            </footer>
+                        </blockquote>
+                    </div>
                 </div>
-            </div>
-
-        </div>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+                <div class="col col-sm-6">
+                    <a name="education"><h2>Education</h2></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="card-header bg-primary text-white">Facts</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
+                            </dl>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light mt-3">
+                        <blockquote class="blockquote card-body">
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
+                            <footer class="blockquote-footer"> Mother Theresa,
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+                <div class="col col-sm-6">
+                    <a name="sante"><h2>Sante</h2></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="card-header bg-primary text-white">Facts</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
+                            </dl>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light mt-3">
+                        <blockquote class="blockquote card-body">
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
+                            <footer class="blockquote-footer"> Mother Theresa,
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+                <div class="col col-sm-6">
+                    <a name="finance"><h2>finance</h2></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="card-header bg-primary text-white">Facts</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
+                            </dl>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light mt-3">
+                        <blockquote class="blockquote card-body">
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
+                            <footer class="blockquote-footer"> Mother Theresa,
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+         </div>
+    </div>
+    <div class="container">
+        <div class="row row-content">
+                <div class="col col-sm-6">
+                    <a name="agriculture"><h2>Agriculture</h2></a>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="col-sm-6">
+                    <h3 class="card-header bg-primary text-white">Facts</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="row">
+                                <dt class="col-6">Nombre de famille :</dt>
+                                <dd class="col-6">200</dd>
+                                <dt class="col-6">Riz, Sucre, Savon par famille</dt>
+                                <dd class="col-6">1</dd>
+                            </dl>
+                       </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card bg-light mt-3">
+                        <blockquote class="blockquote card-body">
+                            <p class="mb-0">Ce n'est pas combien nous donnons, mais combien d'amour nous mettons en donnant.</p>
+                            <footer class="blockquote-footer"> Mother Theresa,
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+         </div>
     </div>
 
     {% endblock %}

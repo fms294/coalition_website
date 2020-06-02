@@ -9,56 +9,100 @@
     {% block content %}
     <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
         <div class="container">
-<!--            <a class="navbar-brand" href="#"><img src="img/logo.jpg" height="30" width="30"></a>-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                  <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="nucampNavbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}"> <i class="fa fa-home fa-lg"></i> Home  </a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info fa-lg"></i>  About  </a></li>
-<!--                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>  Sites  </a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  Contact  </a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="{% url 'index' %}" role="button" data-toggle="dropdown" > <i class="fa fa-home fa-lg"></i> Qui sommes-nous</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#vision">Notre vision</a>
+                            <a class="dropdown-item" href="#organisation">Notre organisation</a>
+                            <a class="dropdown-item" href="#mission">Notre mission</a>
+                            <a class="dropdown-item" href="#finance">Notre finance</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info fa-lg"></i> Nos actions/campagnes  </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  contact </a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container">
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
-                <h2>Our Objectif </h2>
+        <div class="row row-content ">
+            <div class="col-12">
+                <a name="vision"><h2>Notre Vision</h2></a>
+                <h3>Partern1</h3>
+                <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+                <h3>Partern2</h3>
+                <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
             </div>
-            <div class="col">
-                <h3>Give back </h3>
-                <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <h3>Give back2 </h3>
-                <p class="d-none d-sm-block"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <h3>Give back3 </h3>
-                <p class="d-none d-sm-block"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-            </div>
-        </div>
+         </div>
     </div>
 
+    <div class="container ">
+        <div class="row row-content">
+            <div class="col-12">
+                 <a name="organisation"><h2>Notre organisation</h2></a>
+                    <h3>Partern1</h3>
+                    <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
-    <div class="container">
-        <div class="row row-content align-items-center">
-            <div class="col-sm-4 order-sm-last col-md-3">
-                <h2 class="text-sm-right">Our Community Partners</h2>
+                    <h3>Partern2</h3>
+                    <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
             </div>
-            <div class="col">
-                <div class="media">
-                    <div class="media-body align-self-center">
-                        <h3>Partern1</h3>
-                        <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        </div>
+     </div>
+     <div class="container ">
+        <div class="row row-content">
+            <div class="col-12">
+                <a name="mission"><h2>Notre Mission</h2></a>
+                <h3>Partern1</h3>
+                <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 
-                        <h3>Partern2</h3>
-                        <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                    </div>
+                <h3>Partern2</h3>
+                <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+        </div>
+     </div>
+     <div class="container ">
+        <div class="row row-content">
+            <div class="col-sm-9">
+                <a name="finance"><h2>Notre Finance</h2></a>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="bg-primary text-light">
+                                <th></th>
+                                <th>2020</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-primary">
+                            <tr>
+                                <th>Amerique</th>
+                                <td>$ 2, 000</td>
+                            </tr>
+                            <tr>
+                                <th>Afrique</th>
+                                <td>$ 1, 000</td>
+                            </tr>
+                            <tr>
+                                <th>Europe</th>
+                                <td>$1, 500</td>
+                            </tr>
+                             <tr>
+                                <th><strong>TOTAL</strong></th>
+                                <td><strong>$3, 500</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
         </div>
-    </div>
+     </div>
+
     {% endblock %}
 
 </body>

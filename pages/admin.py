@@ -15,7 +15,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
 
 class MembershipAdmin(admin.ModelAdmin):
-    list_display = ('firstname', 'lastname', 'email', 'areacode', 'phone_number', 'country')
+    list_display = ('firstname', 'lastname', 'email', 'areacode', 'phone_number', 'country','date')
     list_filter = ('date','country')
     search_fields = ('firstname', 'lastname', 'email','country')
 
