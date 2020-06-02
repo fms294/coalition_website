@@ -20,7 +20,7 @@ def contact(request):
         form_class = FeedbackForm(request.POST)
         if form_class.is_valid():
             form_class.save()
-            messages.add_message(request, messages.INFO, "Your Feedback was Submitted, THANK YOU.")
+            messages.add_message(request, messages.INFO, "Votre message a ete recu, MERCI.")
             return redirect('contact')
     else:
         form_class = FeedbackForm()

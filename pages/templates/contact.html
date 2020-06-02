@@ -58,20 +58,20 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <h1>Notre Message</h1>
+        <h1>Votre Message</h1>
         <form action="" method ="post">
             {% csrf_token %}
             <div class="row">
                 <div class="col-6">
-                    {{ form.firstname | as_crispy_field }}
+                    {{ form.prenom | as_crispy_field }}
                 </div>
                 <div class="col-6">
-                    {{ form.lastname | as_crispy_field }}
+                    {{ form.nom | as_crispy_field }}
                 </div>
             </div>
             {{ form.email | as_crispy_field }}
-            {{ form.feedback |as_crispy_field }}
-            <button type="submit" class="btn btn-success">Envoi</button>
+            {{ form.message |as_crispy_field }}
+            <button type="submit" class="btn btn-success">Envoyer</button>
         </form>
     </div>
     {% endblock %}
