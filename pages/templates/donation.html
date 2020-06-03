@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donation</title>
+</head>
+<body>
+
+    {% block content %}
+        <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                     <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nucampNavbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}"><i class="fa fa-newspaper-o fa-lg"></i>  Qui sommes-nous</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info fa-lg"></i> Nos actions/campagnes  </a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'blog_index' %}"><i class="fa fa-newspaper-o fa-lg"></i>  Actualites </a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  contact </a></li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a class="nav-link" href="{% url 'donation' %}"><i class="fa fa-shopping-basket fa-lg"></i>  Donation </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+             <div class="row">
+                <div class="col">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{% url 'index' %}">Qui sommes-nous</a></li>
+                        <li class="breadcrumb-item active">Donation</li>
+                    </ol>
+                </div>
+             </div>
+        </div>
+        <div class="container">
+            <div class="row row-content ">
+                <div class="col-12">
+                    <a name="paypal"><h2>Paypal</h2></a>
+                    <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    <div class="col-12 col-md-3 col-xl-6">
+                        <a class="btn btn-lg  btn-info" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3fcmd%3d_account">Paypal Payement</a>
+                    </div>
+                    <hr/>
+                    <a name="Chiffud"><h2>Chiffud</h2></a>
+                    <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    <div class="col-12 col-md-3 col-xl-6">
+                        <a class="btn btn-lg  btn-info" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3fcmd%3d_account">Chiffud</a>
+                    </div>
+                     <hr/>
+                    <a name="Orange Money"><h2>Orange  Money</h2></a>
+                    <p class="d-none d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    <div class="col-12 col-md-3 col-xl-6">
+                        <a class="btn btn-lg  btn-info" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3fcmd%3d_account">Orange Money</a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

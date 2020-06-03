@@ -24,15 +24,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="{% static "img/logo.jpg" %}" class="img-fluid" alt="logo image" height="100" width="100">
-<!--                <img src="img/logo.png" class="img-fluid" alt="logo image">-->
+                 <a href="{% url 'index' %}"><img src="{% static "img/mylogo.jpeg" %}" class="img-fluid" alt="logo image" height="100" width="100"></a>
                 </div>
                 <div class="col ">
                     <h1>G.D.C</h1>
                     <h2>Guinea Diaspora Coalition</h2>
-                </div>
-                <div class="col-12 col-md-3 col-xl-6 align-self-right">
-                    <a class="btn btn-lg  btn-info mt-4" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fcgi-bin%2Fwebscr%3fcmd%3d_account">Please Donate Here</a>
                 </div>
            </div>
         </div>
@@ -49,7 +45,9 @@
                         <ul class="list-unstyled">
                             <li><a href="{% url 'index' %}">Qui sommes-nous</a></li>
                             <li><a href="{% url 'about' %}">Nos actions</a></li>
+                            <li><a href="{% url 'blog_index' %}">Actualite</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'donation' %}">Donation</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-sm-5 text-center">

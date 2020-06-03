@@ -24,7 +24,10 @@
                             <a class="dropdown-item" href="#">Carriere</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  contact </a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  Contact </a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'donation' %}"><i class="fa fa-shopping-basket fa-lg"></i>  Donation </a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +46,7 @@
                 </a>&nbsp;
                 {% endfor %}
             </small>
-            <p>{{ post.body | slice:":400" }}...</p>
+            <p>{{ post.body | slice:":300" }}...</p>
         {% endfor %}
     </div>
 {% endblock %}

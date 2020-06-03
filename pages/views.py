@@ -25,3 +25,7 @@ def contact(request):
     else:
         form_class = FeedbackForm()
     return render(request, 'contact.html', {'form': form_class})
+
+
+def donation(request):
+    return render(request, 'donation.html')
