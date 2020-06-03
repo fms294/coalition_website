@@ -3,32 +3,34 @@ from django.db import models
 
 # Create your models here.
 
+from django.db import models
+
 class Category(models.Model):
-    post_type = models.CharField(max_length=20)
+    name = models.CharField(max_length=20)
 
     class Meta:
         verbose_name = "categorie"
 
     def __str__(self):
-        return self.post_type
+        return self.name
 
 
 class Post(models.Model):
-    titre = models.CharField(max_length=255)
-    contenu = models.TextField()
-    date_creation = models.DateTimeField(auto_now_add=True)
-    date_modification = models.DateTimeField(auto_now=True)
+    title = models.CharField(max_length=255)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
 
     def __str__(self):
-        return '%s, %s' % (self.titre, self.contenu)
+        return '%s, %s' % (self.title, self.body)
 
 
 class Comment(models.Model):
-    autheur = models.CharField(max_length=60)
-    contenu = models.TextField()
-    date_creation = models.DateTimeField(auto_now_add=True)
+    author = models.CharField(max_length=60)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
 
     def __str__(self):
-        return '%s, %s' % (self.autheur, self.contenu)
+        return '%s, %s' % (self.author, self.body)

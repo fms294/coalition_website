@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <nav class="navbar navbar-dark navbar-expand-sm sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav mr-auto">
+                    <li><a class="nav-link" href="{% url 'index' %}" role="button" data-toggle="dropdown" > <i class="fa fa-home fa-lg"></i> Qui sommes-nous</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><i class="fa fa-info fa-lg"></i> Nos actions/campagnes  </a></li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="{% url 'blog_index' %}" role="button" data-toggle="dropdown" > <i class="fa fa-newspaper-o fa-lg"></i> Actualite</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'blog_index' %}">Articles</a>
+<!--                            <a class="dropdown-item" href="#">Articles</a>-->
+                            <a class="dropdown-item" href="#">Carriere</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-card fa-lg"></i>  contact </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Qui sommes-nous</a></li>
+                    <li class="breadcrumb-item active">Actualites</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 offset-md-2">
+        <h1>{{ post.title }}</h1>
+        <small>
+            {{ post.created_on.date }} |&nbsp;
+            Categories:&nbsp;
+            {% for category in post.categories.all %}
+            <a href="{% url 'blog_category' category.name %}">
+                {{ category.name }}
+            </a>&nbsp;
+            {% endfor %}
+        </small>
+        <p>{{ post.body | linebreaks }}</p>
+        <h3>Laisse un commentaire:</h3>
+        <form action="/blog/{{ post.pk }}/" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.author }}
+            </div>
+            <div class="form-group">
+                {{ form.body }}
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+        <h3>Comments:</h3>
+        {% for comment in comments %}
+        <p>
+            On {{comment.created_on.date }}&nbsp;
+            <b>{{ comment.author }}</b> wrote:
+        </p>
+        <p>{{ comment.body }}</p>
+        <hr>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+</body>
+</html>
