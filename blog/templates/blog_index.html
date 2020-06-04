@@ -55,9 +55,12 @@
             </a>&nbsp;
             {% endfor %}
         </small>
-        <p>{{ post.body | slice:":400" }}...</p>
+
+        <p>{{ post.body | slice:":300" }}...</p>
+
         {% endfor %}
         </div>
+
     {% endblock %}
 </body>
 </html>

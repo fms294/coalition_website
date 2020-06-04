@@ -11,7 +11,6 @@ def blog_index(request):
     return render(request, "blog_index.html", context)
 
 
-
 def blog_category(request, category):
     posts = Post.objects.filter(
         categories__name__contains=category
@@ -46,3 +45,4 @@ def blog_detail(request, pk):
         "form": form,
     }
     return render(request, "blog_detail.html", context)
+

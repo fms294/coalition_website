@@ -29,3 +29,8 @@ def contact(request):
 
 def donation(request):
     return render(request, 'donation.html')
+
+
+def carriere(request):
+    return render(request, 'carriere.html')
+

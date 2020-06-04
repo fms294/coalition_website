@@ -20,7 +20,6 @@
                         <a class="nav-link" href="{% url 'blog_index' %}" role="button" data-toggle="dropdown" > <i class="fa fa-newspaper-o fa-lg"></i> Actualite</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'blog_index' %}">Articles</a>
-<!--                            <a class="dropdown-item" href="#">Articles</a>-->
                             <a class="dropdown-item" href="#">Carriere</a>
                         </div>
                     </li>
@@ -46,7 +45,10 @@
                 </a>&nbsp;
                 {% endfor %}
             </small>
-            <p>{{ post.body | slice:":300" }}...</p>
+            <p>{{ post.body | slice:":200" }}...</p>
+            <div>
+
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
